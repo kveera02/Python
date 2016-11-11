@@ -22,6 +22,11 @@
 # Written by Phil Burgess / Paint Your Dragon for Adafruit Industries.
 # BSD license, all text above must be included in any redistribution.
 
+# Edited by Kevin Vee
+#changed a lot of magic numbers to variables
+#code can now easily be modified and used for various sized screens instead of just the 2.8" screen
+#added constants that can be changed by the user
+
 import atexit
 import cPickle as pickle
 import errno
@@ -38,8 +43,11 @@ import yuv2rgb
 from pygame.locals import *
 from subprocess import call  
 
+#change width and height to match pixel density of screen being used
+#the button positions can be experimented with 
+#if the buttons aren't working set VIEW_MOUSE to True
 
-SCREEN_WIDTH = 480
+SCREEN_WIDTH = 480 
 SCREEN_HEIGHT = 320
 DONE_BUTTON_POS = [10 , 250]; #[x , y] position
 GEAR_BTN_POS = []
