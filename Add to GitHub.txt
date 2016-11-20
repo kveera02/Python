@@ -1,0 +1,6 @@
+cd-- to local repo
+git init-- to make sure it's initialized
+git add . -- setup for commit
+git commit -m "comment" - to commit
+git remote -v -- check github
+git push origin master -- pushes online
